@@ -24,18 +24,18 @@ public class Base {
 		prop.load(fis); 
 		String browserName = prop.getProperty("browser");
 		if (browserName.equalsIgnoreCase("chrome")) {
-			System.setProperty("webdriver.chrome.driver", "DriverResources\\Drivers\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", "scr\\test\\resource\\DriverResources\\chromedriver.exe");
 			System.setProperty("webdriver.chrome.silentOutput", "true");
 			driver = new ChromeDriver();
 		}
         else if(browserName.equalsIgnoreCase("firefox")){
 			
-			System.setProperty("webdriver.gecko.driver", "DriverResources\\Drivers\\geckodriver.exe");
+			System.setProperty("webdriver.gecko.driver", "scr\\test\\resource\\DriverResources\\geckodriver.exe");
 			driver = new FirefoxDriver();
 		}
 		
 		else if(browserName.equals("IE")){
-			System.setProperty("webdriver.ie.driver", "DriverResources\\Drivers\\IEDriverServer.exe");
+			System.setProperty("webdriver.ie.driver", "scr\\test\\resource\\DriverResources\\IEDriverServer.exe");
 			 driver = new FirefoxDriver();
 			 }
 		driver.manage().window().maximize();
